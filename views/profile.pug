@@ -1,0 +1,50 @@
+doctype html
+
+
+html
+  head
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='/stylesheets/nav.css')
+    link(rel='stylesheet', href='/stylesheets/login.css')
+  body
+    //-nav
+    .container(onclick='toggleSidebar()')
+      .bar1
+      .bar2
+      .bar3
+    #sidebar.sidebar
+      a(href='#home') Home
+      a.active(href='/profile') Profile
+      a(href='/contact') Contact
+      a(href='/about') About
+    //-end
+
+    
+   
+    //-login
+    button(onclick="redirectToLogout()", style='width:auto;position:absolute; right:100px; top:0px;') Log out    
+
+    
+
+    script.
+        //-nav
+        function toggleSidebar() {
+        var sidebar = document.getElementById("sidebar");
+        var content = document.querySelector(".content");
+        if (sidebar.style.width === "200px") {
+            sidebar.style.width = "0";
+            content.style.marginLeft = "0";
+        } else {
+            sidebar.style.width = "200px";
+            content.style.marginLeft = "200px";
+        }
+        }
+        //-end.
+        function redirectToLogout() {
+        
+        window.location.href = '/home';
+        }
+        function redirectToRegister() {
+            // 使用 window.location.href 将用户重定向到注册页面
+            window.location.href = 'register'; // 将这里的网址替换成你的注册页面地址
+        }

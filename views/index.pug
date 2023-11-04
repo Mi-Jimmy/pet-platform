@@ -1,0 +1,56 @@
+html
+  head
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='/stylesheets/nav.css')
+    link(rel='stylesheet', href='/stylesheets/login.css')
+  body
+    //-nav
+    .container(onclick='toggleSidebar()')
+      .bar1
+      .bar2
+      .bar3
+    #sidebar.sidebar
+      a.active(href='#home') Home
+      a(href='/profile') Profile
+      a(href='/contact') Contact
+      a(href='/about') About
+    //-end
+
+    
+   
+    //-login
+    button(onclick="redirectToLogin()", style='width:auto;position:absolute; right:100px; top:0px;') Login      
+
+   
+    link(rel='stylesheet', href='/stylesheets/register.css')
+
+    button(onclick="redirectToRegister()" style='width:auto; position:absolute; right:0px; top:0px;') Sign Up
+    
+
+  script.
+    //-nav
+    function toggleSidebar() {
+      var sidebar = document.getElementById("sidebar");
+      var content = document.querySelector(".content");
+      if (sidebar.style.width === "200px") {
+        sidebar.style.width = "0";
+        content.style.marginLeft = "0";
+      } else {
+        sidebar.style.width = "200px";
+        content.style.marginLeft = "200px";
+      }
+    }
+     //-end.
+     function redirectToLogin() {
+      
+      window.location.href = 'login';
+     }
+     function redirectToRegister() {
+    
+        window.location.href = 'register'; 
+    }
+    
+    
+    
+      
+    

@@ -1,0 +1,10 @@
+doctype html
+link(rel='stylesheet', href='/stylesheets/login.css')
+
+.container 
+    h1 Login
+        form(action='/login' method='POST')
+        img.avatar(src='/images/av2.png' alt='Avatar')
+        input(type='text' name='username' placeholder='username')
+        input(type='password' name='password' placeholder='password')
+        button login

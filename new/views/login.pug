@@ -1,0 +1,13 @@
+doctype html
+link(rel='stylesheet', href='/stylesheets/login.css')
+
+.container
+    h1 Login
+    form(action='/login' method='POST')
+        figure
+            a(href='http://localhost:3000/')
+                img.avatar(src='/images/cat3.jpg' alt='Avatar')
+                figcaption click me go back to home page;
+        input(type='text' name='username' placeholder='username')
+        input(type='password' name='password' placeholder='password')
+        button.cover login

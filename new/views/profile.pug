@@ -1,0 +1,72 @@
+doctype html
+
+
+html
+  head
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='/stylesheets/nav.css')
+
+    link(rel='stylesheet', href='/stylesheets/profile.css')
+  body
+    //-nav
+    .container(onclick='toggleSidebar()')
+      .bar1
+      .bar2
+      .bar3
+    #sidebar.sidebar
+      a(href='/home') Home
+      a.active(href='/profile') Profile
+      a(href='/contact') Contact
+      a(href='/about') About
+    //-end
+    h1 Wellcom,#{username}!
+    h2 Make a new post!
+    form(action='/profile' method='POST' enctype='multipart/form-data')
+      h3 username
+      input#username(type='text' value=username name='username' required='')
+      h3 Image
+      input#image(type='file' name='image' value='' required='')
+      br
+      input#content(type='text' placeholder='content' value='' name='content' required='')
+      br
+      button(type='submit') Post
+   
+    
+    //-login
+    button(onclick="redirectToLogout()", style='width:auto;position:absolute; right:0px; top:0px;') Log out    
+
+    
+
+    script.
+        //-nav
+        function toggleSidebar() {
+        var sidebar = document.getElementById("sidebar");
+        var content = document.querySelector(".content");
+        if (sidebar.style.width === "200px") {
+            sidebar.style.width = "0";
+            content.style.marginLeft = "0";
+        } else {
+            sidebar.style.width = "200px";
+            content.style.marginLeft = "200px";
+        }
+        }
+        //-end.
+        function redirectToLogout() {
+        window.location.href = '/home';
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+          const urlParams = new URLSearchParams(window.location.search);
+          const username = urlParams.get('username');
+
+         
+          document.getElementById('username').textContent = username;
+
+          const homeLink = document.querySelector('a[href="/home"]');
+          homeLink.href = `/home?username=${username}`;
+          const profileLink = document.querySelector('a[href="/profile"]');
+          profileLink.href = `/profile?username=${username}`;
+          const aboutLink = document.querySelector('a[href="/about"]');
+          aboutLink.href = `/about?username=${username}`;
+          const contactLink = document.querySelector('a[href="/contact"]');
+          contactLink.href = `/contact?username=${username}`;
+        });

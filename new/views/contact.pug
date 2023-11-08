@@ -1,0 +1,180 @@
+html
+  head
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='/stylesheets/nav.css')
+    link(rel='stylesheet', href='/stylesheets/contact.css')
+    link(rel='shortcut icon' href='#')
+
+  body
+    //-nav
+    .container(onclick='toggleSidebar()')
+      .bar1
+      .bar2
+      .bar3
+    #sidebar.sidebar
+      a.active(href='/home') Home
+      a(href='/profile') Profile
+      a(href='/contact') Contact
+      a(href='/about') About
+    //-end
+    br
+    br
+    center
+      h1#title2 Get In Touch
+    br
+    br
+    hr
+    br
+    br
+    .row
+      .col
+        center
+          img.pic2(src='/images/address.png')
+          h3 ADDRESS
+        p.colp2
+          | Weifield Group Contracting
+          br
+          | 6950 S. Jordan Road
+          br
+          | Centennial, CO 80112
+          br
+          br
+          | Northern Colorado Office
+          br
+          | 6775 Sherman Street,
+          br
+          | Loveland, CO 80538
+          br
+          br
+          | Southern Colorado Office
+          br
+          | 4474 Barnes Road
+          br
+          | Colorado Springs, CO 80917
+          br
+          br
+          | Wyoming Office
+          br
+          | 308 Southwest Dr Unit E
+          br
+          | Cheyenne, WY 82007
+      .col
+        center
+          img.pic2(src='/images/phone.png')
+          h3 PHONE
+        p.colp2
+          | Weifield Group Contracting
+          br
+          | 877.WEIFIELD phone
+          br
+          br
+          | Weifield 24/7 Service Department
+          br
+          | 877.WEIFIELD
+          br
+          | (Then press 0 for emergency calls)
+          br
+          br
+          | Northern Colorado Office
+          br
+          | 877.WEIFIELD phone
+          br
+          br
+          | Wyoming Office
+          br
+          | 877.WEIFIELD phone
+          br
+          br
+      .col
+        center
+          img.pic2(src='/images/email.png')
+          h3 EMAIL
+        p.colp2
+          | Request for Proposal
+          br
+          | Info@weifieldgroup.com
+          br
+          br
+          | All Bid Opportunities
+          br
+          | estimating@weifieldgroup.com
+          br
+          br
+          | Electrical Service Calls
+          br
+          | service@weifieldgroup.com
+          br
+          br
+          | Employment Opportunities
+          br
+          | recruiting@weifieldgroup.com
+          br
+    hr
+    center
+      h2 Contact Us
+      form
+        label(for='fname') Your Name:
+        br
+        input#fname(type='text', name='firstname', placeholder='Enter your name here', maxlength='15', required)
+        br
+        label(for='E-mail') E-mail:
+        br
+        input#E-mail(type='email', name='E-mail', placeholder='Enter your email here', maxlength='50', required)
+        br
+        label(for='country') Your country:
+        br
+        select#country(name='country')
+          option(value='Taiwan') Taiwan
+          option(value='Taiwan2') Taiwan2
+          option(value='Also_Taiwan') Also_Taiwan
+        br
+        label(for='subject') Leave us some message:
+        br
+        textarea#subject(name='subject', placeholder='Feel free to write anything here')
+        br
+        input(type='submit', value='Submit')
+    br
+    br
+    br
+
+    
+   
+   
+    
+
+  script.
+
+    function toggleSidebar() {
+      var sidebar = document.getElementById("sidebar");
+      var content = document.querySelector(".content");
+      if (sidebar.style.width === "200px") {
+        sidebar.style.width = "0";
+        content.style.marginLeft = "0";
+      } else {
+        sidebar.style.width = "200px";
+        content.style.marginLeft = "200px";
+      }
+    }
+     //-end.
+     function redirectToLogin() {
+      
+      window.location.href = 'login';
+     }
+     function redirectToRegister() {
+    
+        window.location.href = 'register'; 
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const username = urlParams.get('username');
+
+      // 更新链接的 href 属性
+      const homeLink = document.querySelector('a[href="/home"]');
+      homeLink.href = `/home?username=${username}`;
+      const profileLink = document.querySelector('a[href="/profile"]');
+      profileLink.href = `/profile?username=${username}`;
+      const aboutLink = document.querySelector('a[href="/about"]');
+      aboutLink.href = `/about?username=${username}`;
+      const contactLink = document.querySelector('a[href="/contact"]');
+      contactLink.href = `/contact?username=${username}`;
+    });

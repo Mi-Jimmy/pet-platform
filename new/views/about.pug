@@ -1,0 +1,77 @@
+html
+  head
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='/stylesheets/nav.css')
+    link(rel='stylesheet', href='/stylesheets/about.css')
+    link(rel='shortcut icon' href='#')
+
+  body
+    //-nav
+    .container(onclick='toggleSidebar()')
+      .bar1
+      .bar2
+      .bar3
+    #sidebar.sidebar
+      a.active(href='/home') Home
+      a(href='/profile') Profile
+      a(href='/contact') Contact
+      a(href='/about') About
+    //-end
+
+    
+   
+    h1.title Who We Are
+    center
+      p.content
+        | We are 3 senior students try hard not to fail ourselves, we currently studied in Tamkang University. For this course, we have to design a nodejs app with a server connected to a database and people can access it from browser. Our drive led by curiosity, and a never-ending thirst for progress. We don't want to fail this course, so we made this website.
+    hr
+    .row
+      .col
+        h2.name 黃則穎
+        img.pic(src='/images/	bigbrain.png')
+        p.colp
+          | He is the brain of this group. He handles all the coding problems. He's a genius!! We choose this picture because he has a big brain.
+      .col
+        h2.name 蔡宇哲
+        img.pic(src='/images/lettuce.png')
+        p.colp
+          | He does nothing about coding, but he handles all the chores properly. He is very useful. We choose this picture because he has the word lettuce in his name.
+      .col
+        h2.name 陳柏叡
+        img.pic(src='/images/goblin.png')
+        p.colp
+          | He does half coding and half chores. He is a good person. We choose this picture because he is very short, like a goblin.
+    
+
+  script.
+
+    function toggleSidebar() {
+      var sidebar = document.getElementById("sidebar");
+      var content = document.querySelector(".content");
+      if (sidebar.style.width === "200px") {
+        sidebar.style.width = "0";
+        content.style.marginLeft = "0";
+      } else {
+        sidebar.style.width = "200px";
+        content.style.marginLeft = "200px";
+      }
+    }
+     //-end.
+    document.addEventListener('DOMContentLoaded', function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const username = urlParams.get('username');
+
+      // 更新链接的 href 属性
+      const homeLink = document.querySelector('a[href="/home"]');
+      homeLink.href = `/home?username=${username}`;
+      const profileLink = document.querySelector('a[href="/profile"]');
+      profileLink.href = `/profile?username=${username}`;
+      const aboutLink = document.querySelector('a[href="/about"]');
+      aboutLink.href = `/about?username=${username}`;
+      const contactLink = document.querySelector('a[href="/contact"]');
+      contactLink.href = `/contact?username=${username}`;
+    });
+    
+    
+      
+    

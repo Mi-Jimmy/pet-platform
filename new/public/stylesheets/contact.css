@@ -1,0 +1,88 @@
+*{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.row{
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.col{
+	width: 30%;
+	float: right;
+	margin-right: 2%;
+	
+
+}
+
+#title2{
+	font-size: 50px;
+}
+
+.pic2{
+	width: 70px;
+	height: 70px;
+	
+	margin-right: auto;
+}
+.colp2{
+	text-align: center;
+
+}
+
+hr{
+	width: 80%;
+}
+
+input[type=text]{
+	width: 30%;
+  	padding: 5px;
+	border: 2px solid black;
+	border-radius: 4px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	box-sizing: border-box;
+}
+
+input[type=E-mail]{
+	width: 30%;
+  	padding: 5px;
+	border: 2px solid black;
+	border-radius: 4px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	box-sizing: border-box;
+}
+
+select{
+	width: 30%;
+	padding: 5px;
+	border: 2px solid black;
+	border-radius: 4px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	box-sizing: border-box;
+}
+
+textarea{
+	width: 30%;
+  	padding: 5px;
+	border: 2px solid black;
+	border-radius: 4px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	box-sizing: border-box;
+	height: 100px;
+}
+
+input[type=submit]{
+	width: 10%;
+  	padding: 5px;
+	border: 2px solid black;
+	border-radius: 4px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	box-sizing: border-box;
+}
+

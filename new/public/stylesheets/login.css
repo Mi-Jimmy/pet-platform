@@ -1,0 +1,65 @@
+body {font-family: Arial, Helvetica, sans-serif;}
+
+h1 {
+  color: #000080; /* 深藍色 */
+}
+.container {
+  text-align: center;
+}
+/* Full-width input fields */ 
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  color:#1E90FF;
+}
+button {
+  background-image: url('/images/paws.jpg');
+  background-size: 500px; 
+  background-position: center center; 
+  background-repeat: no-repeat; 
+  color: #00BFFF;
+  padding: 20px;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+  width: 30%;
+}
+
+/* Set a style for all buttons */
+button.cover {
+  background-image: url('/images/paws.jpg');
+  background-size: cover; 
+  background-position: center center; 
+  background-repeat: no-repeat; 
+  color: #00BFFF;
+  font-size: 24px;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 30%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  
+  width: 60%;
+  aspect-ratio: 3 / 1;
+  border-radius: 50%;
+}
+

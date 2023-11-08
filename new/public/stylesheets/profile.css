@@ -1,0 +1,55 @@
+h1{
+    text-align: center;
+    color: #004080; 
+}
+h2{
+    padding-top: 100px;
+    text-align: center;
+    color: #1E90FF;
+}
+form {
+    text-align: center;
+    width:40%;
+    border: 1px solid #ccc;
+    margin: auto;
+    color: #1E90FF;
+}
+input[type=text]{
+    width: 10%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    color:#1E90FF;
+}
+#image{
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    box-sizing: border-box;
+    color:#1E90FF;
+}
+#content{
+    width: 80%;
+    height:200px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    color:#1E90FF;
+}
+
+button {
+    background-image: url('/images/paws3.jpg');
+    background-size: cover; 
+    color: rgb(10, 3, 70);
+    padding: 20px;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+    font-weight: bold;
+    font-size: 20px;
+  }
